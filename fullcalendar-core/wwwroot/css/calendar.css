@@ -1,0 +1,43 @@
+#calendar-wrapper {
+  height: 100vh; }
+
+#calendar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.fc-header-toolbar {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+#calendar a.fc-event {
+  color: #fff;
+  /* bootstrap default styles make it black. undo */ }
+
+#eventModal label {
+  text-align: right; }
+
+.modal-footer {
+  justify-content: space-between !important; }
+
+.custom-qtip {
+    background-color: #825656; /* Background color */
+    color: #333; /* Text color */
+    border: 1px solid #ccc; /* Border color */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for the tooltip */
+}
+
+    /*.custom-qtip .qtip-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .custom-qtip .qtip-content {
+        font-size: 14px;
+    }*/
+

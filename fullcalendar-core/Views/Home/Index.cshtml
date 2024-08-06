@@ -1,0 +1,92 @@
+﻿<style>
+    .align {
+        display: flex;
+        margin-bottom: -1px; /* Adjust this value to reduce or increase spacing */
+    }
+
+    .adjustment {
+        margin-left: 15px; /* Adjust this value to reduce or increase spacing */
+    }
+</style>
+
+<div id="calendar-wrapper">
+    <div id='calendar'></div>
+</div>
+
+<!-- Event Details Modal -->
+<div class="modal fade" id="eventDetailsModal" role="dialog" aria-labelledby="eventDetailsModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+           @*  <div class="modal-header">
+                <h4 class="modal-title" id="eventDetailsModalLabel">Event Details</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div> *@
+            <div class="modal-body">
+                <div class="form-group align" style="color: red">
+                    <label><i class="fas fa-user"></i></label>
+                    <strong><p id="EventDetailsOrganizer" class="form-control-static adjustment" ></p></strong>
+                </div>
+                
+                <div class="form-group align">
+                    <label><i class="fas fa-folder"></i></label>
+                    <strong><p id="EventDetailsType" class="form-control-static adjustment"></p></strong>
+                </div>
+
+                @* <div class="form-group align">
+                    <label><i class="fas fa-align-left"></i>Descrizione</label>
+                    <p id="EventDetailsDescription" class="form-control-static adjustment"></p>
+                </div> *@
+                <div class="form-group align">
+                    <label><i class="fas fa-clock"></i></label>
+                    <p id="EventDetailsStartTime" class="form-control-static adjustment"></p>
+                </div>
+                <div class="form-group align">
+                    <label><i class="fas fa-user"></i></label>
+                    <p id="EventDetailsattendee" class="form-control-static adjustment"></p>
+                </div>
+               @*  <div class="form-group align">
+                    <label><i class="fas fa-clock"></i> End Time</label>
+                    <p id="EventDetailsEndTime" class="form-control-static adjustment"></p>
+                </div> *@
+                @* <div class="form-group align">
+                    <label><i class="fas fa-sun"></i> Tutto il giorno</label>
+                    <p id="EventDetailsAllDay" class="form-control-static adjustment"></p>
+                </div> *@
+                <div class="form-group align">
+                    <label><i></i>Location:</label>
+                    <p id="EventDetailsLocation" class="form-control-static adjustment"></p>
+                </div>
+                <div class="form-group align">
+                    <label><i></i>Categoria:</label>
+                    <p id="EventDetailsType1" class="form-control-static adjustment"></p>
+                </div>
+                <div class="form-group align">
+                    <label><i></i>Iscritti:</label>
+                    <p id="EventDetailsNoOfAtande" class="form-control-static adjustment"></p>
+                </div>
+                <button type="button" class="btn btn-primary" id="manageBookingsButton">Gestione prenotazioni</button>
+
+                <h5>Elenco Iscritti</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendeeList">
+                        <!-- Attendee details will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+           @*  <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> *@
+        </div>
+    </div>
+</div>
+
+<!-- Include Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
